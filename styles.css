@@ -18,13 +18,25 @@ body {
 
 main {
   background: url(assets/others/Mobile.png);
-  width: 23.4375rem;
-  height: 50.75rem;
+  width: 375px;
+  height: 812px;
   color: var(--grey);
 }
 
+.faixa {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+.encaixe {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
 .container {
-  max-width: 15.625rem;
+  max-width: 250px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -90,6 +102,53 @@ ul a:hover {
   transform: translateY(-8px);
 }
 
+/* responsivo */
+/* extra large devices: 1200 > */
+@media (min-width: 1200px) {
+  html {
+    background: #29292e;
+  }
+
+  main {
+    width: 22.375rem;
+    height: 33.75rem;
+    background: url(./assets/others/mask.png);
+  }
+
+  .faixa {
+    visibility: visible;
+    opacity: 100%;
+    position: fixed;
+    margin-bottom: 0;
+    top: -50px;
+    z-index: 1;
+  }
+
+  .encaixe {
+    visibility: visible;
+    opacity: 100%;
+    position: relative;
+    margin-bottom: 0;
+    top: 5px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .container {
+    top: -300px;
+    margin-bottom: -500px;
+    height: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -110px;
+  }
+
+  .avatar {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 /* large devices: 1023 > */
 /* large devices: 992 > */
 
